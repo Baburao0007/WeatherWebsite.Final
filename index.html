@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.onload = function(){
+            console.log("loaded")
+            document.getElementById('loader').style.display="none";
+            document.getElementById('content').style.display="none";
+        };
+    </script>
+    <style>
+        #content{display: none;}
+        #loader{
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 400px;
+        height: 350px; 
+        } 
+        #loader img {width: 400px;}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'>
+    <link rel = "shortcut icon" href="icons/weather.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Weather, आपके सेवा में</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="banner_content">
+            <div class="banner_text">
+                <strong>Instructions: <br>
+                    1. Kindly Switch To Desktop Site For Better Experience. </br>
+                    2. You Can Give Us Feedback, If You Wish Too After Using Site. </br>
+                    3. Close The Menu After Reading.
+                </strong>
+            </div>
+            <button class="banner_close" type="button">
+                <span class="material-icons">
+                    close
+                    </span>
+            </button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>Weather, आपके सेवा में</h3>
+            <p>Website Is Still Under Development Stages.</p>
+            <p>Stay Tuned For Further Updates, Till Then Follow Us On Socials.</p>
+            <ul class="socials">
+                <li><a href="socials.html"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="socials.html"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="socials.html"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="socials.html"><i class="fa fa-github"></i></a></li>
+                <li><a href="socials.html"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+          <div class="footer-bottom">
+            <p>Copyright &copy;2022 Weather, आपके सेवा में. Designed By <span>Krish</span></p>
+          </div>
+    </footer>
+    <div class="navigation-bar">
+        <header>
+                <nav>
+                    <ul class="nav_links">
+                    <li><a href="#">Weather, आपके सेवा में</a></li>
+                </ul>
+            </nav>
+            <a href="index.html" class="cta"><button>Home</button></a>
+            <a href="updates.html" class="cta"><button>Updates</button></a>
+            <a href="https://forms.gle/qF82s7G6thoZ9w6Z9" class="cta"><button>Feedback</button></a>
+            <a href="sign_up.html" class="cta"><button>Sign Up</button></a>
+            <a href="contact.html" class="cta"><button>Contact Us</button></a>
+        </header>
+    </div>
+    <div id="loader">
+        <img src="icons/giphy.gif" alt="">
+    </div>
+    <div class="main">
+        <header><i class="bx bx-left-arrow-alt"></i>Weather</header>
+        <section class="input-part">
+            <p class="info-txt"></p>
+            <input type="text" placeholder="Enter City Name" spellcheck="false" required>
+            <div class="separator"></div>
+            <button>Get Device Location</button>
+        </section>
+        <section class="weather-part">
+            <img src="icons/cloud.svg" alt="Weather Icon">
+            <div class ="temp">
+                <span class="numb">13</span>
+                <span class="deg"></span>&#8451
+            </div>
+            <div class="weather">Broken Clouds</div>
+            <div class="location">
+                <i class="bx bx-map"></i>
+                <span>Begusarai, India</span>
+            </div>
+            <div class="bottom-details">
+                <div class="column feels">
+                    <i class="bx bxs-thermometer"></i>
+                    <div class="details">
+                        <div class ="temp">
+                            <span class="numb-2">17</span>
+                            <span class="deg"></span><b>°C</b>
+                        </div>
+                        <p>Feels Like</p>
+                    </div>
+                </div>
+                <div class="column humidity">
+                    <i class="bx bxs-droplet-half"></i>
+                    <div class="details">
+                            <span>84%</span>
+                        </div>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

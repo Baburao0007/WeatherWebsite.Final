@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-bar{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #0066ff;
+}
+
+li, a, button{
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #FFE5B4;
+}
+
+button{
+    color: white;
+    padding: 4px 8px;
+    margin-right: 8px;
+    background-color:#43AFFC;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    color: #FFE5B4;
+    background-color: #00ccff;
+}
+
+header{
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    padding: 15px 2%;
+}
+
+body{
+    font-family: 'Inter Tight', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0066ff 0%, #33ccff 100%);
+}
+
+.main{
+    position: absolute;
+    top: 28%;
+    left: 30%;
+    margin: -25px 0 0 -25px;
+    width: 400px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+
+.main header{
+    display: flex;
+    font-size: 30px;
+    font-weight: 500;
+    color: #43AFFC;
+    padding: 16px 15px;
+    padding-right: 150px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+header i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.main.active header{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.main.active header i{
+    margin-left: 0em;
+    font-size: 30px;
+}
+
+.main .input-part{
+    margin: 20px 25px 30px;
+}
+
+.main.active .input-part{
+    display: none;
+}
+
+.input-part :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 18px;
+}
+
+.input-part input{
+    text-align: center;
+    border: 1px solid #bfbfbf;
+}
+
+.input-part .separator{
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator::before{
+    content: "OR";
+    background: #fff;
+    padding: 0 15px;
+    font-size: 19px;
+    color: #43AFFC;
+}
+
+.input-part button{
+    color: #fff;
+    background: #43AFFC;
+    cursor: pointer;
+}
+
+.input-part button:hover{
+    background-color: #00ccff;
+}
+
+.main.active .input-part{
+    display: none;
+}
+
+.input-part .info-txt{
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.info-txt:hover{
+    background-color: #00ccff;
+}
+
+.info-txt.error{
+    color: #721c24;
+    display: block;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.info-txt.pending{
+    color: #0c5460;
+    display: block;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+
+.input-part input:is(:focus, :valid){
+    border: 2px solid #43AFFC;
+}
+
+.bx-left-arrow-alt{
+    position:relative;
+    margin-right: auto;
+    color :#43AFFC;
+}
+.main .weather-part{
+    display: none;
+    margin: 30px 0 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main.active .weather-part{
+    display: flex;
+}
+
+.weather-part img{
+    max-width: 125px;
+}
+
+.weather-part .temp{
+    display: flex;
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.weather-part .temp .numb{
+    font-weight: 700;
+}
+
+.weather-part .temp .deg{
+    font-weight: 700;
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+
+.weather-part .weather{
+    font-weight: 700;
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+
+.weather-part .location{
+    font-weight: 700px;
+    display: flex;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 19px;
+    align-items: flex-start;
+}
+
+.location i{
+    font-weight: 700;
+    font-size: 22px;
+    margin: 4px 5px 0 0;
+}
+
+.weather-part .bottom-details{
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+.bottom-details .column{
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column i{
+    font-size: 40px;
+    color: #5dbbff;
+}
+
+.column.humidity{
+    border-left: 1px solid #CCC;
+}
+
+.details .temp, .humidity span{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: -3px;
+}
+
+.details .temp .deg{
+    font-weight: 700;
+    margin: 0;
+    font-size: 20px;
+    padding: 0 2px 0 1px;
+}
+
+.details p{
+    margin-top: 2px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: -6px;
+}
+
+.humidity i{
+    font-size: 37px;
+}
+
+footer{
+    height: auto;
+    background: #111;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 1.8rem;
+    transition: color 0.4s ease;
+}
+
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200;
+}
+
+.banner{
+    background: #111;
+}
+
+.banner_content{
+    padding: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.banner_text{
+    flex-grow: 1;
+    line-height: 1.4;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+.banner_close{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.banner_text,
+.banner_close >span{
+    color: #fff;
+}
